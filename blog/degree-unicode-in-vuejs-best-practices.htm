@@ -1,0 +1,275 @@
+<!doctype html>
+<html class="no-js" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://degreeaudit.github.io/blog/degree-unicode-in-vuejs-best-practices.htm" />
+    <meta charset="utf-8">
+    <!--====== Title ======-->
+    <title>Degree Unicode in Vue.js: Best Practices - Degree Audit</title>
+        <meta name="keywords" content="Degree Unicode in Vue.js: Best Practices" />
+        <meta name="description" content="The digital world is, ostensibly, borderless. A user in Buenos Aires can interact with an application built in Berlin, which pulls data from a server in Bangalore. This interconnectedness is the bedrock of the modern web, but it also presents one of the most persistent and nuanced challenges for dev - Degree Audit" />
+        <link rel="icon" href="/assets/website/img/clashnyanpasu/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="Degree Audit">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://degreeaudit.github.io/blog/degree-unicode-in-vuejs-best-practices.htm" />
+    <meta property="og:site_name" content="Degree Audit" />
+    <meta property="og:title" content="Degree Unicode in Vue.js: Best Practices - Degree Audit" />
+    <meta property="og:image" content="https://degreeaudit.github.io/uploads/20240623/dd928850dc6292d0072f467f6a2a45e8.webp" />
+        <meta property="og:release_date" content="2025-12-06T10:16:13" />
+    <meta property="og:updated_time" content="2025-12-06T10:16:13" />
+        <meta property="og:description" content="The digital world is, ostensibly, borderless. A user in Buenos Aires can interact with an application built in Berlin, which pulls data from a server in Bangalore. This interconnectedness is the bedrock of the modern web, but it also presents one of the most persistent and nuanced challenges for dev - Degree Audit" />
+        
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--====== Magnific Popup CSS ======-->
+    <link rel="stylesheet" href="/assets/website/css/clashnyanpasu/magnific-popup.css">
+    <!--====== Slick CSS ======-->
+    <link rel="stylesheet" href="/assets/website/css/clashnyanpasu/slick.css">
+    <!--====== Line Icons CSS ======-->
+    <link rel="stylesheet" href="/assets/website/css/clashnyanpasu/LineIcons.css">
+    <!--====== Bootstrap CSS ======-->
+    <link rel="stylesheet" href="/assets/website/css/clashnyanpasu/bootstrap.min.css">
+    <!--====== Default CSS ======-->
+    <link rel="stylesheet" href="/assets/website/css/clashnyanpasu/default.css">
+    <!--====== Style CSS ======-->
+    <link rel="stylesheet" href="/assets/website/css/clashnyanpasu/style.css">
+    <link rel="stylesheet" href="/assets/website/css/G.css" />
+
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Degree Unicode in Vue.js: Best Practices - Degree Audit">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LDX2HGGY4E"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-LDX2HGGY4E');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6756294301027701"
+     crossorigin="anonymous"></script></head>
+
+<body data-page="detail">
+        <!--====== PRELOADER PART START ======-->
+    <div class="preloader">
+        <div class="loader">
+            <div class="ytp-spinner">
+                <div class="ytp-spinner-container">
+                    <div class="ytp-spinner-rotator">
+                        <div class="ytp-spinner-left">
+                            <div class="ytp-spinner-circle"></div>
+                        </div>
+                        <div class="ytp-spinner-right">
+                            <div class="ytp-spinner-circle"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--====== PRELOADER PART ENDS ======-->
+    <!--====== NAVBAR TWO PART START ======-->
+    <section class="navbar-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <nav class="navbar navbar-expand-lg">
+                                                <a class="navbar-brand top" href="/">
+                            Degree Audit                        </a>
+                                                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTwo" aria-controls="navbarTwo" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="toggler-icon"></span>
+                            <span class="toggler-icon"></span>
+                            <span class="toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse sub-menu-bar" id="navbarTwo">
+                            <ul class="navbar-nav m-auto">
+                                                                <li class="nav-item"><a href="/">Home</a></li>
+                                                                <li class="nav-item"><a href="/blog/">Blog</a></li>
+                                                            </ul>
+                        </div>
+
+                    </nav> <!-- navbar -->
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+    </section>
+    <!--====== NAVBAR TWO PART ENDS ======-->
+    <!--====== SLIDER PART START ======-->
+    <section id="home" class="slider_area">
+        <div id="carouselThree" class="carousel slide sub-page" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="slider-content">
+                                    <h1 class="title">Degree Unicode in Vue.js: Best Practices</h1>
+                                    <p class="text">
+                                        <a href="/">Home</a> / 
+                                        <a href="/blog/">Blog</a> / 
+                                        <span>Blog Details</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div> <!-- row -->
+                    </div> <!-- container -->
+                    <div class="slider-image-box d-none d-lg-flex align-items-end">
+                        <div class="slider-image">
+                            <img src="/assets/website/img/clashnyanpasu/slider/1.png" alt="Hero">
+                        </div> <!-- slider-imgae -->
+                    </div> <!-- slider-imgae box -->
+                </div> <!-- carousel-item -->
+            </div>
+        </div>
+    </section>
+    <!--====== SLIDER PART ENDS ======-->
+    <!--====== ABOUT PART START ======-->
+    <section id=about class=about-area>
+        <div class=container>
+            <div class="row">
+                <div class="col-md-9">
+                                    <div class="xcblog-blog-detail xcblog-blog-detail-defined">
+                      <p>The digital world is, ostensibly, borderless. A user in Buenos Aires can interact with an application built in Berlin, which pulls data from a server in Bangalore. This interconnectedness is the bedrock of the modern web, but it also presents one of the most persistent and nuanced challenges for developers: internationalization, or i18n. At the very heart of this challenge lies the humble yet powerful character—the symbol for a degree, temperature, or geographic coordinate. It seems simple, a tiny circle superscript (°). Yet, the journey of this character from your Vue.js code to a user's screen, correctly rendered across every device and locale, is a microcosm of the entire i18n struggle. Handling the degree symbol correctly is not just a matter of typographical pedantry; it is a fundamental best practice for building robust, accessible, and truly global Vue.js applications.</p>  <p>In an era defined by climate change, global supply chains, and worldwide scientific collaboration, the accurate representation of data is paramount. A misplaced or missing degree symbol in a weather application can lead to user confusion; in a scientific dashboard, it can undermine credibility; in a logistics system tracking perishable goods, it could even have tangible consequences. This article delves deep into the best practices for handling the Unicode degree symbol within the Vue.js framework, connecting this technical detail to the broader imperatives of our time.</p>  <h2>Why the Degree Symbol is a Canary in the Coal Mine for i18n</h2>  <p>Before we dive into the Vue.js-specific implementations, it's crucial to understand why this particular character is so emblematic of larger i18n issues. The degree symbol is ubiquitous. It appears in contexts from weather (<code>23°C</code>), to mathematics (<code>45° angle</code>), to geolocation (<code>40.7128° N, 74.0060° W</code>). Its correct display is non-negotiable for data integrity.</p>  <h3>The Pitfalls of "Faking It"</h3>  <p>Many developers, especially those early in their careers, might be tempted to take shortcuts. These approaches are the digital equivalent of using a screwdriver to hammer a nail—it might work sometimes, but it's the wrong tool and will eventually cause problems.</p>  <ul> <li><strong>The Superscript 'o':</strong> Writing <code>23^o C</code> or <code>23o C</code>. This is visually confusing, unprofessional, and breaks the semantic meaning of the character. Screen readers will interpret this as the letter "o," leading to accessibility failures for visually impaired users who hear "twenty-three oh C."</li> <li><strong>The ASCII Charmer:</strong> Using the grave accent <code>`</code> or the apostrophe <code>'</code> as a substitute. This is even worse, as it can be misinterpreted as a unit of measurement for angles (arcminutes) or as a quotation mark.</li> <li><strong>Inline HTML Entities:</strong> Using <code>&amp;deg;</code> directly in your Vue templates. While this often works, it mixes character encoding with your presentation logic and can be less clear than using the raw Unicode character itself, especially in a modern JavaScript framework.</li> </ul>  <p>All these methods are fragile, inaccessible, and fail to acknowledge that we are building for a global audience. They represent a pre-Unicode mindset in a Unicode world.</p>  <h2>Embracing Unicode: The Foundation of Modern Text</h2>  <p>The solution to this chaos is Unicode, a universal character encoding standard that assigns a unique number to every character across all writing systems. The degree symbol is assigned the code point <code>U+00B0</code>. In Vue.js, as in all modern web development, embracing Unicode directly is the gold standard.</p>  <p>You can represent the degree symbol in your JavaScript and templates in several equivalent ways:</p>  <ul> <li><strong>The Character Itelf:</strong> Simply paste <code>°</code> into your code.</li> <li><strong>The Unicode Escape Sequence:</strong> Use <code>\u00B0</code> in your JavaScript strings.</li> <li><strong>The HTML Entity:</strong> While not preferred in the template logic, <code>&amp;deg;</code> is still valid HTML.</li> </ul>  <p>For Vue.js development, using the raw character (<code>°</code>) or the Unicode escape in your JavaScript is generally the cleanest and most readable approach.</p>  <h3>Vue.js and Dynamic Content: The `v-bind` and `v-text` Paradigm</h3>  <p>The true power of Vue.js lies in its reactivity and dynamic data binding. When you need to display a temperature or angle that comes from a data property, a computed property, or an API response, you must concatenate the value with the degree symbol correctly.</p>  <p>Consider a weather component. Here’s the right way to do it:</p>  <p>```javascript // In your Vue component <template></p>    <div>     <p>Current Temperature: {{ temperature }}{{ degreeSymbol }}C</p>     <!-- Or, even better for accessibility -->     <p>Current Temperature: <span aria-label="{{ temperature }} degrees Celsius">{{ temperature }}{{ degreeSymbol }}C</span></p>   </div>  <p></template></p>  <script> export default {   data() {     return {       temperature: 23,       degreeSymbol: '°' // Direct Unicode character       // Alternatively: degreeSymbol: '\u00B0'     };   } }; </script>  <p>```</p>  <p>For more complex formatting, using a computed property or a method is a best practice. It centralizes your logic and makes the template cleaner.</p>  <p>```javascript // In your Vue component <template></p>    <div>     <p>{{ formattedTemperature }}</p>     <p>{{ formatAngle(45) }}</p>   </div>  <p></template></p>  <script> export default {   data() {     return {       temperature: 23,       unit: 'C'     };   },   computed: {     formattedTemperature() {       return `${this.temperature}°${this.unit}`; // Using template literals     }   },   methods: {     formatAngle(angle) {       return `${angle}°`;     }   } }; </script>  <p>```</p>  <h2>Connecting to Global Challenges: Climate, Data, and Trust</h2>  <p>Now, let's zoom out. Why does this meticulous attention to a single character matter on a global scale? The applications we build are not isolated toys; they are tools that inform, guide, and connect humanity.</p>  <h3>Climate Science and Public Understanding</h3>  <p>The discourse around climate change is dominated by data: global temperature anomalies, Arctic sea ice extent, carbon dioxide concentrations in parts per million. These datasets are visualized in countless dashboards and applications, many of which are built with frameworks like Vue.js. When a scientific institution or news outlet publishes an interactive graph showing a <code>1.5°C</code> temperature rise, the integrity of that symbol is part of the integrity of the message. A mangled symbol can make a site look amateurish, which, in the hyper-polarized world of climate discourse, can be leveraged to erode public trust in the underlying data. Precision in presentation reinforces precision in science.</p>  <h3>Global Logistics and the Cold Chain</h3>  <p>The global supply chain for food and pharmaceuticals relies on the "cold chain"—a temperature-controlled supply chain. Sensors monitor the temperature of shipping containers in real-time, and this data is often presented in management applications. A reading of <code>5 C</code> (missing the degree symbol) is ambiguous. Is it 5 degrees Celsius, or is it a code? In a high-stakes environment where a few degrees can spoil millions of dollars worth of vaccines or food, the unambiguous representation of <code>5°C</code> is a small but critical detail that ensures clarity and prevents catastrophic misinterpretation.</p>  <h2>Advanced Best Practices: i18n Libraries and Beyond</h2>  <p>For simple use cases, hardcoding the symbol as shown above is sufficient. However, for large-scale, enterprise-level Vue.js applications that support dozens of languages and locales, a more sophisticated approach is required.</p>  <h3>Integrating with Vue I18n</h3>  <p>The official <code>vue-i18n</code> library is the cornerstone of internationalization in the Vue ecosystem. It allows you to externalize all your strings, including those with special characters. You should <em>not</em> bury the degree symbol in your template logic. Instead, define it within your locale-specific message files.</p>  <p>```javascript // en.json {   "temperature": "{value}°C",   "angle": "{value}°" }</p>  <p>// de.json (Note: In German, a space is sometimes used before the symbol for angles, but not for temperature) {   "temperature": "{value}°C",   "angle": "{value} °" } ```</p>  <p>In your Vue component, you then use the <code>$t</code> method to format the string.</p>  <p>```javascript <template></p>    <div>     <p>{{ $t('temperature', { value: temperature }) }}</p>     <p>{{ $t('angle', { value: 45 }) }}</p>   </div>  <p></template> ```</p>  <p>This approach cleanly separates the concern of "what character to use" from the component's business logic. It also gracefully handles locale-specific formatting rules, such as the placement of the symbol or the use of a different unit entirely (e.g., Fahrenheit).</p>  <h3>Accessibility and Semantic HTML</h3>  <p>Best practices extend beyond mere display. We must ensure our data is accessible to everyone. Using the correct Unicode character is the first step. The next is providing context for assistive technologies like screen readers.</p>  <p>For a temperature, a screen reader reading "23°C" might be intelligible. But for clarity, we can use ARIA attributes to provide an unambiguous label.</p>  <p><code>html &lt;span aria-label="{{ temperature }} degrees Celsius"&gt;{{ $t('temperature', { value: temperature }) }}&lt;/span&gt;</code></p>  <p>For geographic coordinates, which are more complex, a more detailed label is essential.</p>  <p><code>html &lt;span aria-label="Latitude {{ lat }} degrees North, Longitude {{ long }} degrees West"&gt;   {{ lat }}°N, {{ long }}°W &lt;/span&gt;</code></p>  <h3>Font and Styling Considerations</h3>  <p>Even with the correct Unicode character, you must ensure that the font family you use in your application includes a glyph for <code>U+00B0</code>. Most system fonts and modern web fonts (like Roboto, Inter, or system-ui) support it, but it's a critical item to check during your QA process, especially if you are using a custom or icon-focused font. Styling can be adjusted with CSS if needed, for instance, to adjust the vertical-align property for perfect positioning, though this is rarely necessary with well-designed fonts.</p>  <p>In conclusion, the journey of the degree symbol from your Vue.js code to the user's screen is a deceptively simple task that touches upon the core principles of modern web development: adherence to standards (Unicode), framework best practices (dynamic binding and i18n libraries), and a profound responsibility to our global user base (accessibility and data integrity). By getting the small things right, we build applications that are not only functional but also resilient, trustworthy, and capable of serving a world that desperately needs clear and accurate communication.</p> 
+                    <div class="bs-callout">
+                        <p><strong>Copyright Statement:</strong></p>
+                        <p>Author: Degree Audit</p>
+                        <p>Link: <a href="https://degreeaudit.github.io/blog/degree-unicode-in-vuejs-best-practices.htm">https://degreeaudit.github.io/blog/degree-unicode-in-vuejs-best-practices.htm</a></p>
+                        <p>Source: <a href="https://degreeaudit.github.io">Degree Audit</a></p>
+                        <p>The copyright of this article belongs to the author. Reproduction is not allowed without permission.</p>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>Prev:<a href="/blog/yorku-degree-progress-report-how-to-plan-for-gap-semesters.htm">YorkU Degree Progress Report: How to Plan for Gap Semesters</a></p>
+                                        <p>Next:<a href="/blog/the-graph-of-a-sixthdegree-polynomial-what-to-expect.htm">The Graph of a Sixth-Degree Polynomial: What to Expect</a></p>
+                                    </div>
+                                <div class="panel panel-default mt-5">
+                    <div class="panel-heading">
+                        <h3 class="m-0">Recommended Blog</h3>
+                    </div>
+                    <div class="panel-body">
+                        <ul class="p-0 x-0">
+                                                        <li class="py-2"><a href="/blog/yorku-degree-progress-report-how-to-plan-for-gap-semesters.htm">YorkU Degree Progress Report: How to Plan for Gap Semesters</a></li>
+                                                        <li class="py-2"><a href="/blog/the-psychology-behind-a-business-degree.htm">The Psychology Behind a Business Degree</a></li>
+                                                        <li class="py-2"><a href="/blog/degree-xtra-label-pdf-how-to-add-barcodes-and-qr-codes.htm">Degree Xtra Label PDF: How to Add Barcodes and QR Codes</a></li>
+                                                        <li class="py-2"><a href="/blog/hec-attestation-for-dental-degrees-whats-needed.htm">HEC Attestation for Dental Degrees: What’s Needed</a></li>
+                                                        <li class="py-2"><a href="/blog/65-degrees-fahrenheit-in-celsius-explained.htm">65 Degrees Fahrenheit in Celsius: Explained</a></li>
+                                                        <li class="py-2"><a href="/blog/how-a-communications-degree-can-help-you-work-in-tourism.htm">How a Communications Degree Can Help You Work in Tourism</a></li>
+                                                        <li class="py-2"><a href="/blog/can-you-study-abroad-with-an-xray-tech-associates-degree.htm">Can You Study Abroad with an X-Ray Tech Associate’s Degree?</a></li>
+                                                        <li class="py-2"><a href="/blog/the-educational-importance-of-teaching-degree-celsius-early.htm">The Educational Importance of Teaching Degree Celsius Early</a></li>
+                                                        <li class="py-2"><a href="/blog/the-role-of-ethics-in-a-criminal-justice-career.htm">The Role of Ethics in a Criminal Justice Career</a></li>
+                                                        <li class="py-2"><a href="/blog/why-degree-restaurants-are-a-must-for-alumni.htm">Why Degree Restaurants Are a Must for Alumni</a></li>
+                                                    </ul>
+                    </div>
+                </div>
+                                </div>
+                <div class="col-md-3">
+                    <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">Latest Blog</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/blog/economics-degree-vs-finance-degree-key-differences.htm" title="Economics Degree vs. Finance Degree: Key Differences">Economics Degree vs. Finance Degree: Key Differences</a></li>
+                        <li class="py-2"><a href="/blog/celsius-degree-in-military-applications-extreme-conditions.htm" title="Celsius Degree in Military Applications: Extreme Conditions">Celsius Degree in Military Applications: Extreme Conditions</a></li>
+                        <li class="py-2"><a href="/blog/seconddegree-burn-recovery-timeline-and-tips.htm" title="Second-Degree Burn Recovery: Timeline and Tips">Second-Degree Burn Recovery: Timeline and Tips</a></li>
+                        <li class="py-2"><a href="/blog/15-quotes-about-the-future-after-earning-your-degree.htm" title="15 Quotes About the Future After Earning Your Degree">15 Quotes About the Future After Earning Your Degree</a></li>
+                        <li class="py-2"><a href="/blog/how-to-maintain-a-zero-degree-courtyard-with-minimal-effort.htm" title="How to Maintain a Zero Degree Courtyard with Minimal Effort">How to Maintain a Zero Degree Courtyard with Minimal Effort</a></li>
+                        <li class="py-2"><a href="/blog/the-graph-of-a-sixthdegree-polynomial-what-to-expect.htm" title="The Graph of a Sixth-Degree Polynomial: What to Expect">The Graph of a Sixth-Degree Polynomial: What to Expect</a></li>
+                        <li class="py-2"><a href="/blog/degree-unicode-in-vuejs-best-practices.htm" title="Degree Unicode in Vue.js: Best Practices">Degree Unicode in Vue.js: Best Practices</a></li>
+                        <li class="py-2"><a href="/blog/yorku-degree-progress-report-how-to-plan-for-gap-semesters.htm" title="YorkU Degree Progress Report: How to Plan for Gap Semesters">YorkU Degree Progress Report: How to Plan for Gap Semesters</a></li>
+                        <li class="py-2"><a href="/blog/the-psychology-behind-a-business-degree.htm" title="The Psychology Behind a Business Degree">The Psychology Behind a Business Degree</a></li>
+                        <li class="py-2"><a href="/blog/degree-xtra-label-pdf-how-to-add-barcodes-and-qr-codes.htm" title="Degree Xtra Label PDF: How to Add Barcodes and QR Codes">Degree Xtra Label PDF: How to Add Barcodes and QR Codes</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title"> Blog Archive</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">18</span> <a href="/date/2025-12/" title="2025-12  Blog Archive">2025-12</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">54</span> <a href="/date/2025-11/" title="2025-11  Blog Archive">2025-11</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">56</span> <a href="/date/2025-10/" title="2025-10  Blog Archive">2025-10</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">60</span> <a href="/date/2025-09/" title="2025-09  Blog Archive">2025-09</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">125</span> <a href="/date/2025-08/" title="2025-08  Blog Archive">2025-08</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">73</span> <a href="/date/2025-07/" title="2025-07  Blog Archive">2025-07</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">14</span> <a href="/date/2025-06/" title="2025-06  Blog Archive">2025-06</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+        <!--====== FOOTER PART START ======-->
+    <section class="footer-area footer-dark">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <div class="copyright text-center mt-35">
+                        
+                        <p class="text">
+                            Degree Audit All rights reserved Powered by WordPress
+                        </p>
+                    </div> <!--  copyright -->
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+    </section>
+    <!--====== FOOTER PART ENDS ======-->
+    <!--====== BACK TOP TOP PART START ======-->
+    <a href="#" class="back-to-top"><i class="lni lni-chevron-up"></i></a>
+    <!--====== BACK TOP TOP PART ENDS ======-->
+    <!--====== Jquery js ======-->
+    <script src="/assets/website/js/frontend/clashnyanpasu/vendor/jquery-1.12.4.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnyanpasu/vendor/modernizr-3.7.1.min.js"></script>
+    <!--====== Bootstrap js ======-->
+    <script src="/assets/website/js/frontend/clashnyanpasu/popper.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnyanpasu/bootstrap.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnyanpasu/slick.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnyanpasu/jquery.magnific-popup.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnyanpasu/ajax-contact.js"></script>
+    <!--====== Isotope js ======-->
+    <script src="/assets/website/js/frontend/clashnyanpasu/imagesloaded.pkgd.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnyanpasu/isotope.pkgd.min.js"></script>
+    <!--====== Scrolling Nav js ======-->
+    <script src="/assets/website/js/frontend/clashnyanpasu/jquery.easing.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnyanpasu/scrolling-nav.js"></script>
+    <!--====== Main js ======-->
+    <script src="/assets/website/js/frontend/clashnyanpasu/main.js"></script>
+    <script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
