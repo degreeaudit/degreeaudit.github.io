@@ -1,0 +1,275 @@
+<!doctype html>
+<html class="no-js" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://degreeaudit.github.io/blog/reedsolomon-codes-and-polynomial-degree-selection.htm" />
+    <meta charset="utf-8">
+    <!--====== Title ======-->
+    <title>Reed-Solomon Codes and Polynomial Degree Selection - Degree Audit</title>
+        <meta name="keywords" content="Reed-Solomon Codes and Polynomial Degree Selection" />
+        <meta name="description" content="In the silent, chilled expanse of a hyperscale data center, amidst the hum of countless servers, a quiet revolution is taking place. It is not a revolution of raw processing power, but one of resilience and fidelity. Every byte of data—from a teenager's social media post in São Paulo to a critical f - Degree Audit" />
+        <link rel="icon" href="/assets/website/img/clashnyanpasu/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="Degree Audit">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://degreeaudit.github.io/blog/reedsolomon-codes-and-polynomial-degree-selection.htm" />
+    <meta property="og:site_name" content="Degree Audit" />
+    <meta property="og:title" content="Reed-Solomon Codes and Polynomial Degree Selection - Degree Audit" />
+    <meta property="og:image" content="https://degreeaudit.github.io/uploads/20240623/dd928850dc6292d0072f467f6a2a45e8.webp" />
+        <meta property="og:release_date" content="2025-12-19T09:28:05" />
+    <meta property="og:updated_time" content="2025-12-19T09:28:05" />
+        <meta property="og:description" content="In the silent, chilled expanse of a hyperscale data center, amidst the hum of countless servers, a quiet revolution is taking place. It is not a revolution of raw processing power, but one of resilience and fidelity. Every byte of data—from a teenager's social media post in São Paulo to a critical f - Degree Audit" />
+        
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--====== Magnific Popup CSS ======-->
+    <link rel="stylesheet" href="/assets/website/css/clashnyanpasu/magnific-popup.css">
+    <!--====== Slick CSS ======-->
+    <link rel="stylesheet" href="/assets/website/css/clashnyanpasu/slick.css">
+    <!--====== Line Icons CSS ======-->
+    <link rel="stylesheet" href="/assets/website/css/clashnyanpasu/LineIcons.css">
+    <!--====== Bootstrap CSS ======-->
+    <link rel="stylesheet" href="/assets/website/css/clashnyanpasu/bootstrap.min.css">
+    <!--====== Default CSS ======-->
+    <link rel="stylesheet" href="/assets/website/css/clashnyanpasu/default.css">
+    <!--====== Style CSS ======-->
+    <link rel="stylesheet" href="/assets/website/css/clashnyanpasu/style.css">
+    <link rel="stylesheet" href="/assets/website/css/G.css" />
+
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Reed-Solomon Codes and Polynomial Degree Selection - Degree Audit">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LDX2HGGY4E"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-LDX2HGGY4E');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6756294301027701"
+     crossorigin="anonymous"></script></head>
+
+<body data-page="detail">
+        <!--====== PRELOADER PART START ======-->
+    <div class="preloader">
+        <div class="loader">
+            <div class="ytp-spinner">
+                <div class="ytp-spinner-container">
+                    <div class="ytp-spinner-rotator">
+                        <div class="ytp-spinner-left">
+                            <div class="ytp-spinner-circle"></div>
+                        </div>
+                        <div class="ytp-spinner-right">
+                            <div class="ytp-spinner-circle"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--====== PRELOADER PART ENDS ======-->
+    <!--====== NAVBAR TWO PART START ======-->
+    <section class="navbar-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <nav class="navbar navbar-expand-lg">
+                                                <a class="navbar-brand top" href="/">
+                            Degree Audit                        </a>
+                                                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTwo" aria-controls="navbarTwo" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="toggler-icon"></span>
+                            <span class="toggler-icon"></span>
+                            <span class="toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse sub-menu-bar" id="navbarTwo">
+                            <ul class="navbar-nav m-auto">
+                                                                <li class="nav-item"><a href="/">Home</a></li>
+                                                                <li class="nav-item"><a href="/blog/">Blog</a></li>
+                                                            </ul>
+                        </div>
+
+                    </nav> <!-- navbar -->
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+    </section>
+    <!--====== NAVBAR TWO PART ENDS ======-->
+    <!--====== SLIDER PART START ======-->
+    <section id="home" class="slider_area">
+        <div id="carouselThree" class="carousel slide sub-page" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="slider-content">
+                                    <h1 class="title">Reed-Solomon Codes and Polynomial Degree Selection</h1>
+                                    <p class="text">
+                                        <a href="/">Home</a> / 
+                                        <a href="/blog/">Blog</a> / 
+                                        <span>Blog Details</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div> <!-- row -->
+                    </div> <!-- container -->
+                    <div class="slider-image-box d-none d-lg-flex align-items-end">
+                        <div class="slider-image">
+                            <img src="/assets/website/img/clashnyanpasu/slider/1.png" alt="Hero">
+                        </div> <!-- slider-imgae -->
+                    </div> <!-- slider-imgae box -->
+                </div> <!-- carousel-item -->
+            </div>
+        </div>
+    </section>
+    <!--====== SLIDER PART ENDS ======-->
+    <!--====== ABOUT PART START ======-->
+    <section id=about class=about-area>
+        <div class=container>
+            <div class="row">
+                <div class="col-md-9">
+                                    <div class="xcblog-blog-detail xcblog-blog-detail-defined">
+                      <p>In the silent, chilled expanse of a hyperscale data center, amidst the hum of countless servers, a quiet revolution is taking place. It is not a revolution of raw processing power, but one of resilience and fidelity. Every byte of data—from a teenager's social media post in São Paulo to a critical financial transaction in Singapore, from the petabytes of genomic data mapping the next pandemic to the telemetry from an autonomous vehicle navigating Tokyo's streets—is under constant, invisible threat. The threat of corruption, of loss, of the inevitable entropy that seeks to degrade perfect information into noise. Standing guard against this chaos are two of the most elegant and powerful concepts in applied mathematics: Reed-Solomon codes and the critical art of polynomial degree selection. They are the unsung heroes of our digital age, and understanding their interplay is key to securing our increasingly fragile technological future.</p>  <h2>The Algebra of Trust in a Noisy World</h2>  <p>At its heart, the problem is simple. We need to transmit or store a piece of information. The channel—be it a fiber-optic cable, a wireless spectrum, or a hard disk drive—is imperfect. It introduces errors. How do we not only detect these errors but correct them without needing to ask for a retransmission, especially when the source is a spacecraft billions of miles away or a sensor in a remote forest?</p>  <p>This is where Reed-Solomon (RS) codes enter the picture. Invented in 1960 by Irving S. Reed and Gustave Solomon, they transform the problem of data integrity from one of simple redundancy into a problem of polynomial algebra. The core idea is breathtakingly beautiful: instead of viewing your data as a string of ones and zeros, view it as a series of points that define a unique polynomial.</p>  <p>Imagine your data is the message "12, 5, 8, 3." We can think of this as the evaluations of a polynomial P(x) at specific points, say x=1, x=2, x=3, and x=4, such that: P(1) = 12, P(2) = 5, P(3) = 8, P(4) = 3.</p>  <p>The fundamental theorem of algebra tells us that a polynomial of degree <em>k-1</em> is uniquely defined by <em>k</em> points. Here, with 4 data points, we have a polynomial of degree 3. The genius of Reed-Solomon is to <em>oversample</em> this polynomial. We calculate additional points, say P(5), P(6), P(7), and so on. These extra points are the parity symbols, the "repair bits" of the code.</p>  <p>Now, let's say during transmission, some of these points get corrupted—perhaps due to cosmic radiation affecting a satellite link or a microscopic flaw on a DVD. The receiver gets a mix of good and bad points. The magical property is this: as long as the receiver gathers a sufficient number of <em>correct</em> points (at least <em>k</em>), it can perfectly reconstruct the original degree 3 polynomial, and from it, the original message "12, 5, 8, 3," even without knowing which points were wrong. It's like losing a few pieces of a jigsaw puzzle but still being able to deduce the complete picture from the remaining pieces and the known shape of the puzzle's edges.</p>  <h3>The Knob of Resilience: Polynomial Degree Selection</h3>  <p>This is where the critical design choice comes in: the selection of the polynomial's degree. The relationship is governed by a simple equation:</p>  <p><code>n = k + 2t</code></p>  <p>Where: *   <code>k</code> is the number of original data symbols. *   <code>n</code> is the total number of encoded symbols transmitted or stored. *   <code>t</code> is the maximum number of errors that can be corrected.</p>  <p>The degree of the polynomial is <code>k-1</code>. The choice of <code>k</code>, relative to a fixed <code>n</code>, is the single most important decision when implementing a Reed-Solomon code. It is a direct trade-off between storage efficiency and corrective power.</p>  <ul> <li><p><strong>A Low-Degree Polynomial (High k/n ratio):</strong> Imagine using a polynomial of degree 99 (<code>k=100</code>) to encode data into 110 total symbols (<code>n=110</code>). Here, <code>2t = 10</code>, so <code>t=5</code>. This code is highly efficient; only 10% of the transmitted data is overhead. However, it can only correct 5 errors. It's a sleek, fuel-efficient sports car—fast and economical, but vulnerable to a few potholes on the road.</p></li> <li><p><strong>A High-Degree Polynomial (Low k/n ratio):</strong> Now, take the same <code>n=110</code> but choose a polynomial of degree 49 (<code>k=50</code>). Now, <code>2t = 60</code>, so <code>t=30</code>. This code is much less efficient; over 50% of the data is overhead. But its corrective power is immense—it can withstand 30 errors. This is the heavy-duty, armored personnel carrier of error correction—bulky and slow, but capable of traversing a battlefield.</p></li> </ul>  <h2>Bridging the Digital and the Physical: RS Codes in Action</h2>  <p>This trade-off between efficiency and resilience is not just theoretical; it is being played out in the most critical technologies shaping our present and future.</p>  <h3>Combating Climate Change with Robust Data</h3>  <p>The fight against climate change is a data-intensive endeavor. Thousands of IoT sensors are deployed in extreme environments—on glaciers, in the deep ocean, on wind turbine blades. These sensors collect vital data on temperature, salinity, and structural integrity. The communication channels are notoriously unreliable, suffering from signal loss, interference, and extreme weather.</p>  <p>Here, engineers must carefully select the Reed-Solomon polynomial degree. For a glacier sensor that transmits infrequently but critical data on melt rates, a high-degree polynomial (low <code>k/n</code>) is chosen. The priority is not bandwidth efficiency but the absolute certainty that the few, precious data points that make it back are correct or can be corrected. A corrupted data point could lead to a flawed climate model. The polynomial's resilience ensures the integrity of the science underpinning our planetary survival.</p>  <h3>The Quantum Resistance and Data Archival</h3>  <p>While much attention is on quantum computing breaking current cryptography, a parallel challenge is ensuring the long-term integrity of archived data. We are storing humanity's knowledge—scientific datasets, historical records, cultural heritage—on media like DNA digital storage and archival-grade tapes. These media degrade over decades.</p>  <p>Reed-Solomon codes, particularly as used in advanced erasure coding schemes for distributed storage, are the cornerstone of long-term preservation. When archiving the human genome project data or the Library of Congress, the choice of polynomial degree is made for the centuries. A very low <code>k/n</code> ratio is employed, creating a massive amount of redundancy. The goal is to create a "self-healing" data archive where even if large portions of the physical media decay, the original information can be reconstructed from the surviving fragments, much like paleontologists reconstruct a skeleton from a few fossilized bones. The polynomial becomes a time capsule, engineered to survive entropy itself.</p>  <h3>Autonomous Systems and the Latency-Accuracy Tightrope</h3>  <p>An autonomous vehicle (AV) is a node in a massive, real-time data network. It receives high-definition map updates, sensor data from other vehicles (V2V), and traffic information from infrastructure (V2I). A single bit-flip in a "stop" signal or a corrupted LiDAR point cloud could be catastrophic.</p>  <p>For AVs, the polynomial degree selection is a tightrope walk between latency and accuracy. Using a high-degree polynomial (low <code>k/n</code>) for all communications would create too much overhead, delaying critical decisions. Instead, a smarter, adaptive approach is needed. Safety-critical messages (e.g., brake commands, collision warnings) might use a very resilient code, accepting the latency penalty for absolute integrity. Less critical data, like a software update for the infotainment system, might use a more efficient, lower-degree polynomial. The system dynamically tunes its error correction based on the contextual importance of the data, a process governed by the fundamental principles of the <code>k/n/t</code> relationship.</p>  <h2>The Future is Coded: Beyond Traditional Reed-Solomon</h2>  <p>The story does not end with classic Reed-Solomon codes. The increasing scale and complexity of data have pushed these concepts further, leading to innovations like LDPC codes and, most notably, the emergence of novel polynomial commitment schemes in cryptographic protocols.</p>  <h3>Zero-Knowledge Proofs and the Polynomial Paradigm</h3>  <p>One of the most exciting frontiers in computer science is the development of succinct zero-knowledge proofs (ZKPs), such as zk-SNARKs. These allow one party to prove to another that a statement is true without revealing any information beyond the veracity of the statement itself. This has profound implications for digital privacy, scalability in blockchains, and verifiable computation.</p>  <p>At the very core of many ZKP systems lies the same concept underpinning Reed-Solomon codes: the properties of polynomials. In a ZKP, a complex computation is arithmetized into a massive polynomial. The prover essentially commits to this polynomial, and the verifier asks for evaluations at random points. The soundness of the proof relies on the "Schwartz-Zippel Lemma," which states that two distinct low-degree polynomials can agree on very few points. If a malicious prover tries to cheat by using the wrong polynomial, the verifier's random check will almost certainly catch them.</p>  <p>Here, the "degree selection" is not about error correction but about bounding computational complexity and security. The degree of the polynomial is directly tied to the size of the computation being proved. Managing this degree is paramount for making these proofs practical. It's a stunning full-circle moment: the same algebraic principles that ensure a DVD plays without a scratch are now being used to create a trustless, private digital world.</p>  <p>The silent work of Reed-Solomon codes and the deliberate choice of polynomial degree are more than just an engineering detail. They are a fundamental expression of our attempt to impose order on chaos, to ensure that truth can survive a noisy and adversarial universe. From the depths of the ocean to the vastness of space, from the archives of our past to the encrypted promises of our future, these algebraic guardians stand watch, ensuring that our data, and thus our digital civilization, remains intact.</p> 
+                    <div class="bs-callout">
+                        <p><strong>Copyright Statement:</strong></p>
+                        <p>Author: Degree Audit</p>
+                        <p>Link: <a href="https://degreeaudit.github.io/blog/reedsolomon-codes-and-polynomial-degree-selection.htm">https://degreeaudit.github.io/blog/reedsolomon-codes-and-polynomial-degree-selection.htm</a></p>
+                        <p>Source: <a href="https://degreeaudit.github.io">Degree Audit</a></p>
+                        <p>The copyright of this article belongs to the author. Reproduction is not allowed without permission.</p>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>Prev:<a href="/blog/careers-in-wealth-management-for-economics-majors.htm">Careers in Wealth Management for Economics Majors</a></p>
+                                        <p>Next:<a href="/blog/degree-hs-the-role-of-community-partnerships.htm">Degree HS: The Role of Community Partnerships</a></p>
+                                    </div>
+                                <div class="panel panel-default mt-5">
+                    <div class="panel-heading">
+                        <h3 class="m-0">Recommended Blog</h3>
+                    </div>
+                    <div class="panel-body">
+                        <ul class="p-0 x-0">
+                                                        <li class="py-2"><a href="/blog/careers-in-wealth-management-for-economics-majors.htm">Careers in Wealth Management for Economics Majors</a></li>
+                                                        <li class="py-2"><a href="/blog/0-degree-cafe-how-they-keep-their-drinks-so-frosty.htm">0 Degree Cafe: How They Keep Their Drinks So Frosty</a></li>
+                                                        <li class="py-2"><a href="/blog/how-to-verify-the-authenticity-of-a-degree-before-hiring.htm">How to Verify the Authenticity of a Degree Before Hiring</a></li>
+                                                        <li class="py-2"><a href="/blog/the-ultimate-guide-to-your-yorku-degree-progress-report.htm">The Ultimate Guide to Your YorkU Degree Progress Report</a></li>
+                                                        <li class="py-2"><a href="/blog/how-to-type-the-degree-symbol-in-iphone-safari-address-bar.htm">How to Type the Degree Symbol in iPhone Safari Address Bar</a></li>
+                                                        <li class="py-2"><a href="/blog/the-average-cost-of-a-computer-science-degree-worldwide.htm">The Average Cost of a Computer Science Degree Worldwide</a></li>
+                                                        <li class="py-2"><a href="/blog/how-0-degrees-affects-sleep-patterns.htm">How 0 Degrees Affects Sleep Patterns</a></li>
+                                                        <li class="py-2"><a href="/blog/degree-ultra-clear-black-and-white-a-creative-tool.htm">Degree Ultra Clear Black and White: A Creative Tool</a></li>
+                                                        <li class="py-2"><a href="/blog/how-85c-bakery-keeps-its-menu-fresh-amp-exciting.htm">How 85°C Bakery Keeps Its Menu Fresh &amp; Exciting</a></li>
+                                                        <li class="py-2"><a href="/blog/how-to-stay-positive-during-a-long-recovery-from-5th-degree-burns.htm">How to Stay Positive During a Long Recovery from 5th Degree Burns</a></li>
+                                                    </ul>
+                    </div>
+                </div>
+                                </div>
+                <div class="col-md-3">
+                    <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">Latest Blog</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/blog/how-0-degree-cafe-keeps-its-cool.htm" title="How 0 Degree Cafe Keeps Its Cool">How 0 Degree Cafe Keeps Its Cool</a></li>
+                        <li class="py-2"><a href="/blog/how-does-second-degree-murder-affect-gun-rights.htm" title="How Does Second Degree Murder Affect Gun Rights?">How Does Second Degree Murder Affect Gun Rights?</a></li>
+                        <li class="py-2"><a href="/blog/degree-days-and-their-role-in-district-heating-systems.htm" title="Degree Days and Their Role in District Heating Systems">Degree Days and Their Role in District Heating Systems</a></li>
+                        <li class="py-2"><a href="/blog/using-synthetic-division-to-graph-cubic-polynomials.htm" title="Using Synthetic Division to Graph Cubic Polynomials">Using Synthetic Division to Graph Cubic Polynomials</a></li>
+                        <li class="py-2"><a href="/blog/does-ust-accept-thirdparty-evaluations.htm" title="Does UST Accept Third-Party Evaluations?">Does UST Accept Third-Party Evaluations?</a></li>
+                        <li class="py-2"><a href="/blog/the-best-spanish-degree-programs-for-music-lovers.htm" title="The Best Spanish Degree Programs for Music Lovers">The Best Spanish Degree Programs for Music Lovers</a></li>
+                        <li class="py-2"><a href="/blog/degree-mark-vs-skills-what-employers-really-look-for.htm" title="Degree Mark vs. Skills: What Employers Really Look For">Degree Mark vs. Skills: What Employers Really Look For</a></li>
+                        <li class="py-2"><a href="/blog/sociology-degree-skills-youll-gain-and-how-to-use-them.htm" title="Sociology Degree: Skills You’ll Gain and How to Use Them">Sociology Degree: Skills You’ll Gain and How to Use Them</a></li>
+                        <li class="py-2"><a href="/blog/best-online-degrees-for-real-estate-professionals.htm" title="Best Online Degrees for Real Estate Professionals">Best Online Degrees for Real Estate Professionals</a></li>
+                        <li class="py-2"><a href="/blog/degree-hs-the-role-of-community-partnerships.htm" title="Degree HS: The Role of Community Partnerships">Degree HS: The Role of Community Partnerships</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title"> Blog Archive</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">48</span> <a href="/date/2025-12/" title="2025-12  Blog Archive">2025-12</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">54</span> <a href="/date/2025-11/" title="2025-11  Blog Archive">2025-11</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">56</span> <a href="/date/2025-10/" title="2025-10  Blog Archive">2025-10</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">60</span> <a href="/date/2025-09/" title="2025-09  Blog Archive">2025-09</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">125</span> <a href="/date/2025-08/" title="2025-08  Blog Archive">2025-08</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">73</span> <a href="/date/2025-07/" title="2025-07  Blog Archive">2025-07</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">14</span> <a href="/date/2025-06/" title="2025-06  Blog Archive">2025-06</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+        <!--====== FOOTER PART START ======-->
+    <section class="footer-area footer-dark">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <div class="copyright text-center mt-35">
+                        
+                        <p class="text">
+                            Degree Audit All rights reserved Powered by WordPress
+                        </p>
+                    </div> <!--  copyright -->
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+    </section>
+    <!--====== FOOTER PART ENDS ======-->
+    <!--====== BACK TOP TOP PART START ======-->
+    <a href="#" class="back-to-top"><i class="lni lni-chevron-up"></i></a>
+    <!--====== BACK TOP TOP PART ENDS ======-->
+    <!--====== Jquery js ======-->
+    <script src="/assets/website/js/frontend/clashnyanpasu/vendor/jquery-1.12.4.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnyanpasu/vendor/modernizr-3.7.1.min.js"></script>
+    <!--====== Bootstrap js ======-->
+    <script src="/assets/website/js/frontend/clashnyanpasu/popper.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnyanpasu/bootstrap.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnyanpasu/slick.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnyanpasu/jquery.magnific-popup.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnyanpasu/ajax-contact.js"></script>
+    <!--====== Isotope js ======-->
+    <script src="/assets/website/js/frontend/clashnyanpasu/imagesloaded.pkgd.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnyanpasu/isotope.pkgd.min.js"></script>
+    <!--====== Scrolling Nav js ======-->
+    <script src="/assets/website/js/frontend/clashnyanpasu/jquery.easing.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnyanpasu/scrolling-nav.js"></script>
+    <!--====== Main js ======-->
+    <script src="/assets/website/js/frontend/clashnyanpasu/main.js"></script>
+    <script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
